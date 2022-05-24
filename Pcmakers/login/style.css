@@ -5,7 +5,6 @@ html{
 }
 
 body {
-  background: #fd964c; /* fallback for old browsers */
   background: #fd964c;
   background: linear-gradient(90deg, #f8700f 0%, #fd9e59 35%, #eb6200 140%);
   font-family: "Roboto", sans-serif;
