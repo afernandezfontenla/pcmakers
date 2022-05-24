@@ -1,3 +1,11 @@
+html{
+    background-color: #fd964c;
+}
+
+body{
+    background-color: #fd964c;
+}
+
 #header {
     /*display: flex;*/
     width: 90vw;
@@ -14,19 +22,22 @@
     justify-content: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    
 }
 
 #container-fluid {
     display: flex;
     justify-content: space-around;
+    
 }
 
 #carousel{
-    height: 10%;
-    width: 91%;
-    margin-left: 3.5%;
+    height: 6%;
+    width: 70%;
+    margin-left: 15%;
     margin-top: 1em;
     background-color: green;
+    
 }
 
 #btn-perfil,
@@ -49,6 +60,7 @@
     margin-top: 0.9em;
     height: 3em;
     width: 3em;
+    
 }
 
 #imagenlogo {

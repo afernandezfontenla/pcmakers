@@ -1,4 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+html{
+  background-color: #fd964c;
+  background: linear-gradient(90deg, #f8700f 0%, #fd9e59 35%, #eb6200 140%);
+}
+
+body {
+  background: #fd964c; /* fallback for old browsers */
+  background: #fd964c;
+  background: linear-gradient(90deg, #f8700f 0%, #fd9e59 35%, #eb6200 140%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .signup-page {
   width: 360px;
@@ -41,7 +54,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #fd964c;
 }
 .form .message {
   margin: 15px 0 0;
@@ -88,11 +101,16 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
-  background: #76b852; /* fallback for old browsers */
-  background: rgb(141,194,111);
-  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+
+#home-icon{
+  margin-bottom: 1em;
 }
+
+#create-button{
+  margin-bottom: 1em;
+  background-color: #F47C25;
+  font-weight: bold;
+  color: black;
+}
+
+
