@@ -1,0 +1,260 @@
+html{
+    background-color: #fd964c;
+    
+}
+
+body{
+    background-color: #fd964c;
+
+}
+#page{
+    background-color: #fd964c;
+    
+}
+#white-page{
+    /*
+    height: 90vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    */
+    height: 90%;
+    width: 90%;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: white;
+}
+#header {
+    /*display: flex;*/
+    /*
+    width: 90vw;
+    height: 8em;
+    margin-top: 1vw;
+    margin-left: 3.5vw;
+    */
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+#container-fluid {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#carousel{
+    height: 6%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1em;
+    
+}
+
+#btn-perfil,
+#btn-oferta{
+    margin-left: 1em;
+}
+
+#btn-cesta,
+#btn-perfil,
+#btn-oferta {
+    margin-top: 1.3em;
+    float: right;
+    margin-right: 13%;
+    height: 3em;
+    width: 3em;
+}
+
+#button-navbar-toggler {
+    margin-left: 1em;
+    margin-top: 0.9em;
+    height: 3em;
+    width: 3em;
+    
+}
+
+#imagenlogo {
+    justify-content: space-around;
+    margin-left: 18%;
+    height: 6em;
+    width: 15em;
+}
+
+#imagenlogo:hover{
+    -webkit-animation: vibracion 0.5s infinite;
+}
+
+@keyframes vibracion{
+    0%  { -webkit-transform:rotateZ(-5deg); }
+  25% { -webkit-transform:rotateZ( 0deg) scale(.8); }
+  50%{ -webkit-transform:rotateZ( 5deg); }
+  75%{-webkit-transform:rotateZ( 0deg) scale(.8);}
+  100%{-webkit-transform:rotateZ( -5deg) }
+}
+
+#cart {
+    margin-top: 1.5em;
+    height: 1.7em;
+}
+
+#searcher {
+    /*
+    width: 90vw;
+    height: 15em;
+    margin-left: 3.5vw;
+    */
+    margin-top: 1vw;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+#body {
+    /*
+    width: 90vw;
+    height: 40em;
+    margin-top: 1vw;
+    margin-left: 3.5vw;
+    */
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+#footer {
+    
+    width: 100%;
+    height: 100%;
+    /*
+    width: 90vw;
+    height: 12em;
+    margin-top: 1vw;
+    margin-left: 3.5vw;
+    */
+}
+
+/*
+#collapseTwo{
+    background-color: #fd964c;
+    opacity: 50%;
+}
+*/
+
+/*
+#hola {
+    fill: #fd964c;
+    background-color: #fd964c;
+    opacity: 50%;
+}
+html::selection{
+    fill: green;
+    background-color: green;
+    opacity: 50%;
+}
+*/
+/*
+.accordion-item .accordion-header .accordion-button .active{
+    background: green;
+    background-color: green;
+    fill: red;
+    color: #3c3b3b;
+}
+*/
+
+/*Accordion*/
+.accordion-body{
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+.accordionItem{
+    height: 32vh;
+    width: 13vw;
+
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.accordionItem:hover{
+    transform: scale(1.07);
+}
+
+#boton-comprar{
+    background-color: #fd964c;
+    border: 3px solid #fd7819;
+}
+
+@media (max-width: 800px) {
+
+    .container-fluid{
+        flex-direction: column;
+    }
+
+    #logo{
+        margin-top: 10%;
+    }
+
+    #imagenlogo{
+        margin-left: 0%; 
+    }
+
+    #button-navbar-toggler{
+        margin-top: 13%;
+    }
+
+    #btn-perfil,
+    #btn-oferta{
+        margin-left: 0em;
+    }
+
+    #btn-cesta,
+    #btn-perfil,
+    #btn-oferta {
+        margin-top: 1.3vh;
+        float: right;
+        margin-right: 13%;
+        height: 3em;
+        width: 3em;
+    }
+
+    #btn-oferta{
+        margin-bottom:1.3vh;
+    }
+
+    .iconos{
+        flex-direction: column;
+    }
+
+    .accordion-body{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .accordionItem{
+        width: 30vw;
+        height: 30vh;
+        margin-bottom: 5vw;
+    }
+
+    .accordionItem:hover{
+        transform: scale(1.04);
+    }
+
+}

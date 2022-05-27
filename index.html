@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="page">
+    <div id="white-page">
+      <nav id="header" class="navbar-light bg-light">
+        <div id="container-fluid">
+          <button id="button-navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PCMakers</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar Componentes" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Categorías</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Componentes
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Procesadores</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Placas Base</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Tarjetas Gráficas</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Discos Duros</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Fuentes de Alimentación</a></li>
+                  </ul>
+                </li>
+                <li style="margin-top: 170%;">
+                  <div class="alert alert-warning alert-dismissible fade show"  role="alert">
+                     Y no olvides visitarnos en nuestras <strong>redes sociales!</strong>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="logo">
+            <img id="imagenlogo" src="./images/pcmakerslogo-removebg-preview.png"></img>
+          </div>  
+          
+          <div class="iconos d-flex justify-content-end">
+          <button id="btn-cesta" type="button" class="btn btn-outline-secondary" ><i class="bi bi-basket-fill" ></i></button>
+          <button id="btn-perfil" type="button" class="btn btn-outline-secondary" onclick="window.location.href='/login/index.html'"><i class="bi bi-person-fill"></i></button>
+          <button id="btn-oferta" type="button" class="btn btn-outline-secondary"><i class="bi bi-percent"></i></button>
+          </div>
+        </div>
+
+        <div id="options">
+          <div id="items"></div>
+          <div id="packageinfo"></div>
+          <div id="profile"></div>
+        </div>
+      </nav>
+
+      <div id="carousel">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="productos/oferta1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images\pcmakerslogo.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    
+
+      <div id="searcher">
+        <div id="searchbar">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar Componentes" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="body">
+        <div class="accordion" id="accordionExample">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Procesadores
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div id="firstProcessor" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1101-amd-ryzen-5-5600x-37ghz.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">AMD Ryzen 5 5600X 3.7GHz</h5>
+                      <h6 class="card-text">226.79€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="secondProcessor" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1636-intel-core-i5-12400f-44-ghz.jpg" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Intel Core i5-12400F 4.4GHz</h5>
+                      <h6 class="card-text">196.19€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="thirdProcessor" class="accordionItem">
+                  <div class="card">
+                  <img src="/productos/162-amd-ryzen-5-5500-36ghz-box-mejor-precio.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-title">AMD Ryzen 5 5500 3.6GHz</h5>
+                      <h6 class="card-text">149.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="fourthProcessor" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/intel-core-i5-10400f-290-ghz.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Intel Core i5-10400F 2.90GHz</h5>
+                      <h6 class="card-text">226.79€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button id="hola" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Placas base
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div id="firstMotherboard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1293-gigabyte-b560m-ds3h-v2.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Gigabyte B560M DS3H V2</h5>
+                      <h6 class="card-text">83.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="secondMotherboard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1263-gigabyte-b550-aorus-elite-v2.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Gigabyte B550 AORUS ELITE</h5>
+                      <h6 class="card-text">132.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="thirdMotherboard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1879-msi-mpg-b550-gaming-plus.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">MSI MPG B550 GAMING PLUS</h5>
+                      <h6 class="card-text">141.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="fourthMotherboard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/180-gigabyte-b660-gaming-x-ddr4.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Gigabyte B660 GAMING X</h5>
+                      <h6 class="card-text">165.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Tarjetas Gráficas
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div id="firstGraphicCard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1152-asus-dual-geforce-rtx-3050-oc-edition-8gb-gddr6.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Asus Dual GeForce RTX 3050</h5>
+                      <h6 class="card-text">421.76€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="secondGraphicCard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/msi-geforce-gtx-1650-d6-ventus-xs-oc-4gb-gddr6.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">MSI GeForce GTX 1650 D6</h5>
+                      <h6 class="card-text">218.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="thirdGraphicCard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1207-msi-geforce-rtx-3070-ventus-2x-oc-lhr-8gb-gddr6-opiniones.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">MSI GeForce RTX 3070</h5>
+                      <h6 class="card-text">759.67€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="fourthGraphicCard" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/6.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">MSI GeForce GTX 1660</h5>
+                      <h6 class="card-text">325.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button id="hola" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Discos duros
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div id="firstDisk" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1140-nfortec-alcyon-256gb-ssd-m2-nvme.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Nfortec Alcyon 256GB SSD</h5>
+                      <h6 class="card-text">51.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="secondDisk" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1989-msi-spatium-m390-500gb-ssd-nvme-m2.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">MSI Spatium M390 500GB</h5>
+                      <h6 class="card-text">76.65€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="thirdDisk" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/kioxia-exceria-500gb-ssd-nvme-m2-2280-comprar.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Kioxia EXCERIA 500GB</h5>
+                      <h6 class="card-text">51.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="fourthDisk" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1882-samsung-980-ssd-500gb-pcie-30-nvme-m2.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Samsung 980 SSD 500GB</h5>
+                      <h6 class="card-text">54.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button id="hola" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Fuentes de alimentación
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div id="firstPowerSupply" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/4.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Tempest PSU 750W</h5>
+                      <h6 class="card-text">31.99€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="secondPowerSupply" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/owlotech-bps-600w01.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Owlotech BPS 600W</h5>
+                      <h6 class="card-text">15.98€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="thirdPowerSupply" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/1904-forgeon-bolt-psu-850w-80-plus-gold-full-modular-comprar.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Forgeon Bolt PSU 850W 80+</h5>
+                      <h6 class="card-text">139.98€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="fourthPowerSupply" class="accordionItem">
+                  <div class="card">
+                    <img src="/productos/copia-de-img-9083.webp" style="width:60%; margin-left: 18%;" class="d-block" alt="...card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-title">Nfortec Sagitta RGB 650W 80</h5>
+                      <h6 class="card-text">88.06€</p>
+                        <a id="boton-comprar" href="#" class="btn btn-primary">Añadir a la cesta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer id="footer" class="text-center text-lg-start bg-light text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <div>
+            <a href="https://facebook.com" class="me-4 text-reset">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com" class="me-4 text-reset">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://instagram.com" class="me-4 text-reset">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" class="me-4 text-reset">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2021 Copyright:
+          <a class="text-reset fw-bold" href="">PcMakers</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
